@@ -1,0 +1,54 @@
+<aura:component>
+    <aura:attribute name="footMessage" type="String" />
+    <aura:attribute name="headMessage" type="String" />
+    <aura:attribute name="successMessage" type="String" />
+    <aura:attribute name="level" type="Integer" default="0" />
+    <aura:attribute name="sequence" type="List" default="[]" />
+    <aura:attribute name="playerSequence" type="List" default="[]" />
+    <div class="game">
+        <div class="header">
+            <h1 class="heading js-heading">Simon Game</h1>
+        </div>
+        <div>
+            <p> {!v.headMessage}</p>
+            <p> {!v.successMessage}</p>
+        </div>
+        <table aura:id="container" class=" js-container unclickable">
+            <tbody>
+                <tr>
+                    <th>
+                        <button type="button" aura:id="red" class="redBtn Btn" onclick="{!c.handleRedClick}" />
+                    </th>
+                    <th>
+
+                        <button type="button" aura:id="green" class="greenBtn Btn" style="width:100px; height:100px;"
+                            onclick="{!c.handleGreenClick}" />
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <button type="button" aura:id="blue" class="blueBtn Btn" style="width:100px; height:100px;"
+                            onclick="{!c.handleBlueClick}" />
+                    </th>
+                    <th>
+                        <button type="button" aura:id="yellow" class="yellowBtn Btn" style="width:100px; height:100px;"
+                            onclick="{!c.handleYellowClick}" />
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <div aura:id="startGame" class="info-section">
+            <lightning:button class="start-button js-start" label="Start Game" onclick="{!c.StartGame}" />
+        </div>
+        <div>
+            <span class="info js-info hidden">{!v.footMessage}</span>
+        </div>
+
+    </div>
+    <div>
+        <audio aura:id="sound-red" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
+        <audio aura:id="sound-green" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
+        <audio aura:id="sound-blue" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
+        <audio aura:id="sound-yellow" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
+    </div>
+</aura:component>

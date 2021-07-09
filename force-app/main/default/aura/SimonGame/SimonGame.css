@@ -1,0 +1,66 @@
+.THIS.game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .THIS.header {
+    text-align: center;
+    font-size: 18px;
+  }
+  .THIS.heading {
+    font-size: 18px;
+  }
+  .THIS .Btn {
+      height: 60px;
+      width: 60px;    
+  }
+  .THIS.hidden {
+    display: none !important;
+  }
+  .THIS.invisble {
+    visibility: hidden;
+  }
+  .THIS.unclickable {
+    pointer-events: none;
+  }
+  
+  .THIS .redBtn {
+      width:100px; 
+      height:100px;
+      color: #ffffff;
+      background-color: #f25022; 
+  }
+  
+  .THIS .activated {
+    width:120px; 
+    height:120px;
+    color: #ffffff;
+    background-color: white;
+  }
+  .THIS .greenBtn {
+      color: #ffffff;
+      background-color: #7fba00; 
+  }
+  .THIS.greenBtn.activated {
+    background-color: #a0ea00;
+    transform: translateY(10px);
+  }
+  .THIS .yellowBtn {
+      color: #ffffff;
+      background-color: #ffb900; 
+  }
+  .THIS.tile-yellow:active,
+  .THIS.tile-yellow.activated {
+    background-color: #ffca3d;
+    transform: translateY(10px);
+  }
+  .THIS .blueBtn {
+      color: #ffffff;
+      background-color: #00a4ef; 
+  }
+  .THIS.blueBtn:active,
+  .THIS.blueBtn.activated {
+    background-color: #2bbcff;
+    transform: translateY(10px);
+  }
